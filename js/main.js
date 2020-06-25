@@ -1,5 +1,9 @@
 import { myRouter } from './routes.js';
 
+// import {eventBus} from './main-services/eventbus-service.js'
+
+import navBar from './main-cmps/nav-bar.cmp.js';
+
 var myApp = new Vue({
     el: '#app',
     router: myRouter,
@@ -7,16 +11,15 @@ var myApp = new Vue({
         <div>
             <header class="flex space-between align-center">
                 <h1>Appsus</h1>
-                <nav>
-                    <router-link to="/">Home</router-link>
-                    <router-link to="/email">Mister-Email</router-link>
-                    <router-link to="/keep">Miss-Keep</router-link>
-                    <router-link to="/book">Miss-Books</router-link>
-                </nav>
+                <nav-bar />
             </header>
             <main>
-                <router-view></router-view>
+                <router-view />
             </main>
         </div>  
-    `
+    `,
+
+    components: {
+        navBar
+    }
 })

@@ -1,1 +1,8 @@
-@import './helpers.css'
+@import './helpers.css';
+@import './base.css';
+
+/* MAIN CMPS */
+@import './main-cmps/user-msg.css';
+
+/* EMAIL */
+@import './apps/email/email-main.css';

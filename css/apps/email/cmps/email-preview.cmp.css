@@ -1,0 +1,12 @@
+.email-preview .email-title {
+    flex-basis: 30%;
+}
+
+.email-preview .email-body {
+    flex-basis: 60%;
+    font-size: 12px;
+}
+
+.email-preview .email-sent-at {
+    flex-basis: 10%;
+}

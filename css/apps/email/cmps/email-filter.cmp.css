@@ -1,13 +1,38 @@
-.email-filter {
-    margin-left: 200px;
+.email-filter {}
+
+.email-filter .search-section {
+    flex-grow: 2;
 }
 
-.email-filter .search {
-    width: 60%;
+.email-filter .search-section .search {
+    width: 95%;
     border: 0;
     border-radius: 4px;
     font-size: 16px;
     background-color: #f1f3f4;
     padding: 12px 20px 12px 40px;
     position: relative;
+}
+
+.email-filter .search-section .fa-search {
+    z-index: 100;
+    top: 13px;
+    left: 10px;
+    color: #5f6368;
+}
+
+.email-filter .filters-section {
+    flex-grow: 1;
+}
+
+.email-filter .filters-section i {
+    font-size: 1rem;
+    margin-left: 10px;
+    line-height: 42px;
+    color: #e5e5e5;
+    cursor: pointer;
+}
+
+.email-filter .filters-section i.selected {
+    color: #000000
 }

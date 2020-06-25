@@ -1,0 +1,9 @@
+/* CMPS */
+
+@import './cmps/email-compose.css';
+@import './cmps/email-filter.cmp.css';
+@import './cmps/email-preview.cmp.css';
+/* PAGES */
+
+@import './pages/email-app.cmp.css';
+@import './pages/email-list.cmp.css';
