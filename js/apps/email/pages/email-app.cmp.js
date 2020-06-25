@@ -1,58 +1,38 @@
-import emailList from "../cmps/email-list.cmp.js";
-import emailFilter from "../cmps/email-filter.cmp.js";
+import emailCompose from "../cmps/email-compose.cmp.js";
+import emailFolders from '../cmps/email-folders.cmp.js'
 
-import { emailService } from "../services/email-service.js";
 
 export default {
     template: `
-        <main class="email-app" v-if="emails">
-            <email-filter @filtered="setFilter"></email-filter>
-            <email-list :emails="emailsToShow"></email-list>
+        <main class="email-app grid">
+            <div class="col-1 flex column">
+                <button class="btn-compose" @click="openCompose">Compose</button>
+                <email-folders></email-folders>
+            </div>
+            <div class="col-2 flex column">
+                <router-view></router-view>
+            </div>
+            <email-compose @sent="closeComposeModal" v-if="isModal"></email-compose>
         </main>
     `,
 
     components: {
-        emailList,
-        emailFilter
+        emailCompose,
+        emailFolders
     },
 
     data() {
         return {
-            emails: null,
-            filterBy: null
-        }
-    },
-
-    computed: {
-        emailsToShow() {
-            const filterBy = this.filterBy;
-
-            if (!filterBy) return this.emails;
-
-            var filteredEmails = this.emails.filter(email => {
-                if (filterBy.bySubject) {
-                    return email.subject.toLowerCase().includes(filterBy.bySubject.toLowerCase());
-                }
-
-                if (filterBy.read) {
-                    if (filterBy.read === 'read' && email.isRead) return email.subject;
-                    else if (filterBy.read === 'unread' && !email.isRead) return email.subject;
-                }
-            })
-            return filteredEmails;
+            isModal: false
         }
     },
 
     methods: {
-        setFilter(filterBy) {
-            this.filterBy = filterBy;
+        openCompose() {
+            this.isModal = true;
+        },
+        closeComposeModal() {
+            this.isModal = false;
         }
-    },
-
-    created() {
-        emailService.getEmails()
-            .then(emails => {
-                this.emails = emails;
-            })
     }
 }

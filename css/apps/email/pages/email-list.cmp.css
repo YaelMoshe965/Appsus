@@ -1,0 +1,22 @@
+.email-list .email-preview {
+    padding: 10px 5px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+}
+
+.email-list .email-preview:first-child {
+    border-top: 1px solid #e5e5e5;
+}
+
+.email-list .email-preview.unread {
+    background-color: #ffffff;
+}
+
+.email-list .email-preview a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.email-list .email-preview.unread a {
+    font-weight: bold;
+}
