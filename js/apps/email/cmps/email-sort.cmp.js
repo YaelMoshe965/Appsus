@@ -1,6 +1,6 @@
 export default {
     template: `
-        <section class="email-sort">
+        <section class="email-sort" v-if="false">
             <p>Sort:</p>
             <button @click="updateSort('date')">By Date</button>
             <button @click="updateSort('title')">By Title</button>

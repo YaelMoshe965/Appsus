@@ -5,7 +5,10 @@
 @import './cmps/email-preview.cmp.css';
 @import './cmps/email-starred.css';
 @import './cmps/email-folders.css';
+@import './cmps/email-status.css';
+@import './cmps/email.details.css';
 /* PAGES */
 
+@import './pages/home-page.cmp.css';
 @import './pages/email-app.cmp.css';
 @import './pages/email-list.cmp.css';

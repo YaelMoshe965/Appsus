@@ -32,5 +32,12 @@
 }
 
 .email-filter .filters-section i.selected {
-    color: #000000
+    color: #d54b3d;
+    font-weight: bold;
+}
+
+@media (max-width: 740px) {
+    .email-filter {
+        flex-direction: column;
+    }
 }

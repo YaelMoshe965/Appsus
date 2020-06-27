@@ -1,3 +1,25 @@
+.logo {
+    font-weight: normal;
+    transition: 0.3s all;
+    cursor: pointer;
+    text-decoration: none;
+    color: #551a8b;
+}
+
+.logo:hover {
+    color: #d54b3d;
+}
+
+.logo span {
+    font-weight: bold;
+    color: #d54b3d;
+    transition: 0.3s all;
+}
+
+.logo:hover span {
+    color: #551a8b;
+}
+
 .email-app {
     grid-template-columns: 2fr 10fr;
     grid-gap: 10px;
@@ -31,4 +53,10 @@
 
 .email-app ul.folders li {
     margin-bottom: 5px;
+}
+
+@media (max-width: 740px) {
+    .email-app .btn-compose {
+        width: 90px;
+    }
 }

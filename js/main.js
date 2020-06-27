@@ -8,8 +8,15 @@ var myApp = new Vue({
     template: `
         <div>
             <header class="flex space-between align-center">
-                <h1>Appsus</h1>
-                <nav-bar />
+                <router-link to="/" class="logo">
+                    <h1><span>App</span>sus</h1>
+                </router-link>
+                <div @click="toggleNavbarMobile" class="mobile-navbar menu-button">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <nav-bar :navbarMobile="navbarMobile" />
             </header>
             <main>
                 <router-view />
@@ -19,5 +26,17 @@ var myApp = new Vue({
 
     components: {
         navBar
+    },
+
+    data() {
+        return {
+            navbarMobile: false
+        }
+    },
+
+    methods: {
+        toggleNavbarMobile() {
+            this.navbarMobile = !this.navbarMobile
+        }
     }
 })
