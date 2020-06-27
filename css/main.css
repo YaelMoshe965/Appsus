@@ -3,6 +3,7 @@
 
 /* MAIN CMPS */
 @import './main-cmps/user-msg.css';
+@import './main-cmps/nav-bar.css';
 
 /* EMAIL */
 @import './apps/email/email-main.css';

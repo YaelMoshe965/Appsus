@@ -3,6 +3,8 @@
 @import './cmps/email-compose.css';
 @import './cmps/email-filter.cmp.css';
 @import './cmps/email-preview.cmp.css';
+@import './cmps/email-starred.css';
+@import './cmps/email-folders.css';
 /* PAGES */
 
 @import './pages/email-app.cmp.css';

@@ -1,21 +1,30 @@
 import emailFilter from "../cmps/email-filter.cmp.js";
+import emailSort from '../cmps/email-sort.cmp.js';
 import emailPreview from '../cmps/email-preview.cmp.js';
 import { emailService } from "../services/email-service.js";
 
-import { eventBus, EVENT_FOLDER_TYPE } from '../../../main-services/eventbus-service.js';
+import { eventBus, EVENT_FOLDER_TYPE, EVENT_MSG_SENT, EVENT_EMAIL_STATUS } from '../../../main-services/eventbus-service.js';
 
 export default {
     template: `
         <div>
             <email-filter @filtered="setFilter"></email-filter>
+            <email-sort @sorted="setSort"></email-sort>
             <section class="email-list">
-                <email-preview v-for="email in emailsToShow" :email="email" :key="email.id"></email-preview>
+                <email-preview
+                    v-for="email in emailsToShow"
+                    :email="email"
+                    :key="email.id"
+                    @starred="retreiveEmails"
+                >
+                </email-preview>
             </section>
         </div>
     `,
 
     components: {
         emailFilter,
+        emailSort,
         emailPreview
     },
 
@@ -50,14 +59,26 @@ export default {
     methods: {
         setFilter(filterBy) {
             this.filterBy = filterBy;
-        }
-    },
+        },
 
-    created() {
+        setSort(sortBy) {
+            if (sortBy === 'title') {
+                this.emails.sort((a, b) => { return a.subject.toLowerCase() > b.subject.toLowerCase() ? 1 : -1 });
+            }
+        },
+
+        retreiveEmails() {
             emailService.getEmails(this.folder)
                 .then(emails => {
                     this.emails = emails;
                 })
+        }
+    },
+
+    created() {
+        this.retreiveEmails();
+        eventBus.$on(EVENT_MSG_SENT, () => this.retreiveEmails());
+        eventBus.$emit(EVENT_EMAIL_STATUS, {});
     },
 
     mounted() {

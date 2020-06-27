@@ -4,6 +4,14 @@
     background-color: #f5f5f5;
 }
 
+.email-list .email-preview:hover {
+    border: 1px solid #ccc7c7;
+}
+
+.email-list .email-preview:hover .email-starred .far {
+    color: #7f8080;
+}
+
 .email-list .email-preview:first-child {
     border-top: 1px solid #e5e5e5;
 }

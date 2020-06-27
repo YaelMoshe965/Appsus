@@ -49,7 +49,7 @@ const gDefaultEmails = [
         sentAt: 'Apr 29',
         folderType: {
             isInbox: true,
-            isStarred: false,
+            isStarred: true,
             isSent: false,
             isTrash: false
         }
@@ -116,9 +116,11 @@ function getEmails(folder) {
     var emails = _createEmails();
     if (!folder) return Promise.resolve(emails.filter(email => email.folderType.isInbox));
     var filteredEmails = emails.filter(email => {
+
         if (folder === 'Inbox') return email.folderType.isInbox;
         else if (folder === 'Sent') return email.folderType.isSent;
-        else if (folder === 'Trash') return email.folderType.isTrash;    
+        else if (folder === 'Trash') return email.folderType.isTrash;
+        else if (folder === 'Starred') return email.folderType.isStarred;
     })
     return Promise.resolve(filteredEmails);
 }
@@ -131,10 +133,9 @@ function getById(emailId) {
 
 function removeEmail(emailId) {
     const emailIndex = gEmails.findIndex(email => email.id === emailId);
-    gEmails[emailIndex].folderType = 'Trash';
-    console.log(gEmails[emailIndex]);
-
-    gEmails.splice(emailIndex, 1);
+    gEmails[emailIndex].folderType.isTrash = true;
+    gEmails[emailIndex].folderType.isInbox = false;
+    gEmails[emailIndex].folderType.isStarred = false;
     utilsService.saveToStorage(EMAILS_INBOX_LOCALSTORAGE_KEY, gEmails);
 }
 
@@ -152,10 +153,18 @@ function setReadStatus(emailId, status = true) {
 
 }
 
+function toggleStar(emailId) {
+    const emailIndex = gEmails.findIndex(email => emailId === email.id);
+
+    gEmails[emailIndex].folderType.isStarred = !gEmails[emailIndex].folderType.isStarred;
+    utilsService.saveToStorage(EMAILS_INBOX_LOCALSTORAGE_KEY, gEmails);
+}
+
 export const emailService = {
     getEmails,
     getById,
     removeEmail,
     addEmail,
-    setReadStatus
+    setReadStatus,
+    toggleStar
 }

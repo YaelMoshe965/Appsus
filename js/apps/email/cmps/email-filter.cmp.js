@@ -6,7 +6,7 @@ export default {
                 <input class="search" type="text" placeholder="Search..." v-model="filterBy.bySubject" @input="filter"/>
                 </div>
                 <div class="filters-section flex">
-                <p>Status:</p>
+                <p>Filter:</p>
                 <i title="read" @click="updateStatus('read')" class="filter-by-status far fa-envelope-open" :class="{selected: filterBy.byStatus === 'read'}"></i>
                 <i title="unread" @click="updateStatus('unread')" class="filter-by-status far fa-envelope" :class="{selected: filterBy.byStatus === 'unread'}"></i>
             </div>
