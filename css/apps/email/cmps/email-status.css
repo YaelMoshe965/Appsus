@@ -1,0 +1,9 @@
+.email-status .status-number {
+    font-size: 0.8rem;
+}
+
+@media (max-width: 740px) {
+    .email-status progress {
+        width: 90px;
+    }
+}

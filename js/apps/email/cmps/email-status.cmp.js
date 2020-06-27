@@ -6,7 +6,7 @@ export default {
     template: `
         <section class="email-status" v-if="allEmailsInbox">
             <progress :value="readEmailStatus" max="100"></progress>
-            <div>{{readEmailStatus}}%</div>
+            <div class="status-number">{{readEmailStatus}}%</div>
         </section>
     `,
 
@@ -19,7 +19,8 @@ export default {
 
     computed: {
         readEmailStatus() {
-            return (this.readEmails.length / this.allEmailsInbox.length) * 100;
+            const status = (this.readEmails.length / this.allEmailsInbox.length) * 100;
+            return Math.round(status);
         }
     },
 
