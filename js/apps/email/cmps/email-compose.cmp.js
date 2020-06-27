@@ -1,21 +1,23 @@
 import { emailService } from '../services/email-service.js';
 
-import { eventBus, EVENT_SHOW_MSG } from '../../../main-services/eventbus-service.js';
+import { eventBus, EVENT_SHOW_MSG, EVENT_MSG_SENT } from '../../../main-services/eventbus-service.js';
 
 export default {
     template: `
-        <section class="email-compose">
+        <section class="email-compose flex column">
+            <header>
+                <button class="close" @click="close">x</button>
+                <h6>New Message</h6>
+            </header>
             <form>
                 <div>
-                    <label for="subject">Subject:</label>
-                    <input id="subject" type="text" v-model="compose.subject">
+                    <input id="subject" type="text" placeholder="Subject" v-model="compose.subject">
                 </div>
                 <div>
-                    <label for="body">Body:</label>
                     <textarea id="body" v-model="compose.body"></textarea>
                 </div>
             </form>
-            <button @click="sendEmail">Send</button>
+            <button class="send" @click="sendEmail">Send</button>
         </section>
     `,
 
@@ -31,8 +33,13 @@ export default {
     methods: {
         sendEmail() {
             emailService.addEmail(this.compose.subject, this.compose.body);
-            eventBus.$emit(EVENT_SHOW_MSG, {text: 'Message sent'});
-            this.$emit('sent')
+            eventBus.$emit(EVENT_SHOW_MSG, { text: 'Message sent' });
+            eventBus.$emit(EVENT_MSG_SENT, {});
+            this.$emit('close')
+        },
+
+        close() {
+            this.$emit('close')
         }
     }
 }

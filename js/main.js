@@ -1,7 +1,5 @@
 import { myRouter } from './routes.js';
 
-// import {eventBus} from './main-services/eventbus-service.js'
-
 import navBar from './main-cmps/nav-bar.cmp.js';
 
 var myApp = new Vue({

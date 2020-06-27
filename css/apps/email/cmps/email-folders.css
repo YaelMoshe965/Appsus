@@ -1,0 +1,51 @@
+.email-folders button {
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    padding: 5px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    outline: none;
+    text-align: left;
+}
+
+.email-folders button:hover {
+    background-color: #f1f3f4;
+}
+
+.email-folders button i {
+    color: #767676;
+    margin-right: 10px;
+}
+
+.email-folders .inbox {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.email-folders .inbox:focus {
+    color: #de493f;
+    background-color: #fce8e6;
+}
+
+.email-folders .inbox:focus i {
+    color: #de493f;
+}
+
+.email-folders .red {
+    color: #de493f;
+    background-color: #fce8e6;
+}
+
+.email-folders .red i {
+    color: #de493f;
+}
+
+.email-folders button:focus {
+    font-weight: bold;
+    background-color: #e8eaed;
+}
+
+.email-folders button:last-child {
+    margin-bottom: 15px;
+}
