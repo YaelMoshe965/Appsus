@@ -3,10 +3,13 @@
     margin-top: 10px;
     margin-bottom: 10px;
     resize: none;
+    outline: none;
   }
 
   .review-add input,select{
     outline: none;
+    margin: 0 .5rem 0 0;
+    border-radius: 5px;
   }
 
   .review-add span,label{
@@ -22,15 +25,15 @@
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: #4CAF50;
+    background-color: #241450;
     border: none;
     border-radius: 15px;
   }
   
-  .rev-btn:hover {background-color: #3e8e41}
+  .rev-btn:hover {background-color: #351d77}
   
   .rev-btn:active {
-    background-color: #3e8e41;
+    background-color: #2a185c;
     transform: translateY(4px);
   }
 

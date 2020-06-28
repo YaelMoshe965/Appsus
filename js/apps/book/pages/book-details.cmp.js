@@ -43,13 +43,11 @@ export default {
     },
   },
   created(){
-    console.log(this.$route.params);
     const {bookId} = this.$route.params;
     bookService.getById(bookId)
         .then(book => {
             this.book = book;
         })
-    console.log('CMP Book Details Created', bookId);
   },
   components: {
     reviewAdd
