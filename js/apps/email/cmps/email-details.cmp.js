@@ -5,22 +5,28 @@ import { eventBus, EVENT_SHOW_MSG } from '../../../main-services/eventbus-servic
 export default {
     template: `
         <section class="email-details" v-if="email">
-            <router-link to="/email">< Back</router-link>
-            <h3>{{email.subject}}</h3>
-            <hr>
-            <p class="email-body" v-if="!editedEmailBody">{{email.body}}</p>
-            <div v-else>
-                <textarea class="width-all" v-model="editedEmailBody"></textarea>
+            <router-link to="/email">
+                <div class="back flex align-center">
+                <i class="fas fa-chevron-left fa-2x"></i>
+                </div>
+            </router-link>
+            <div class="content">
+                <h3>{{email.subject}}</h3>
+                <p class="email-body" v-if="!editedEmailBody">{{email.body}}</p>
+                <div v-else>
+                    <textarea class="width-all" v-model="editedEmailBody" autofocus></textarea>
+                </div>
             </div>
-            <hr>
-            <div v-if="!editedEmailBody">
-                <button @click="markAsUnread">unread</button>
-                <button @click="remove">Delete</button>
-                <button @click="startReply">Reply</button>
-            </div>
-            <div v-else>
-                <button @click="cancelReply">Cancel</button>
-                <button @click="submitReply">Send</button>
+            <div class="content-btns">
+                <div v-if="!editedEmailBody">
+                    <button @click="markAsUnread">Unread</button>
+                    <button @click="remove">Delete</button>
+                    <button @click="startReply">Reply</button>
+                </div>
+                <div v-else>
+                    <button @click="cancelReply">Cancel</button>
+                    <button @click="submitReply">Send</button>
+                </div>
             </div>
         </section>
     `,

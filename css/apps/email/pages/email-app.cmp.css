@@ -37,6 +37,7 @@
     border-radius: 4px;
     cursor: pointer;
     transition: .1s background-color;
+    margin-left: 5px;
 }
 
 .email-app .btn-compose:hover {

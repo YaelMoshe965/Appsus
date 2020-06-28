@@ -5,9 +5,9 @@ import { eventBus, EVENT_SHOW_MSG, EVENT_MSG_SENT } from '../../../main-services
 export default {
     template: `
         <section class="email-compose flex column">
-            <header>
-                <button class="close" @click="close">x</button>
+            <header class="flex space-between align-center">
                 <h6>New Message</h6>
+                <button class="close" @click="close">x</button>
             </header>
             <form>
                 <div>
