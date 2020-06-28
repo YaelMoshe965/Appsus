@@ -11,9 +11,7 @@ export const bookService = {
   addGoogleBook
 };
 
-
-
-
+var gBooks = createBooks();
 
 function getGoogleBooks(){
   return axios.get(`https://www.googleapis.com/books/v1/volumes?printType=books&q=effective%20javascript`)
@@ -43,8 +41,6 @@ function addGoogleBook(googleBook){
 
 }
 
-var gBooks = createBooks();
-
 function getBooks() {
 
   return Promise.resolve(gBooks);
@@ -61,7 +57,7 @@ function addReview(bookId, review) {
   getById(bookId).then((book) => {
     book.reviews.unshift(review);
     utils.storeToStorage(KEY, gBooks);
-    console.log(book);
+    
   });
 }
 
