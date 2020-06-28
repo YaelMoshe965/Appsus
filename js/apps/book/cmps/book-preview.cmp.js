@@ -1,6 +1,7 @@
 export default{
   props: ["book"],
   template: `
+
         <div class="book-preview">
             <router-link :to="'/book/' + book.id"><img class="book-img" :src=book.thumbnail> </router-link>
             <li class="text-center">
