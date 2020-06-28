@@ -1,3 +1,5 @@
+{/* <img src="img/homepage.jpg" /> */}
+
 export default {
     template: `
         <section class="home-page">
@@ -10,7 +12,7 @@ export default {
                 <br>
                 Get ready to a new email ERA
             </p>
-            <img src="img/homepage.jpg" />
+            <button>Start Now</button>
         </section>
     `,
 }
