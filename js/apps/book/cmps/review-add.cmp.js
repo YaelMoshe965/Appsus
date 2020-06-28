@@ -6,7 +6,7 @@ export default {
           <section class="review-add" v-if="book">
               <form  @submit.prevent ="addReview" class="review-add">
                   <h3>Add a Review</h3>
-              <span>Full Name </span><input type="text" placeholder="Enter full name" v-model="reviewToEdit.fullName">
+              <span>Name </span><input type="text" placeholder="Enter full name" v-model="reviewToEdit.fullName">
               <label for="stars">Rate:</label>
 
             <select name="stars" id="stars" v-model="reviewToEdit.stars">

@@ -4,6 +4,8 @@
     border: 1px black solid;
     margin-right: 100px;
     margin-bottom: 60px;
+    font-family: euro;
+    font-size: 1.1rem;
 }
 
 .book-preview li{
@@ -14,4 +16,10 @@
 .book-img{
     width: 100%;
     height: 100%;
+}
+
+@media (max-width: 740px) {
+    .book-preview{
+        margin-left: 70px;
+    }
 }
