@@ -12,6 +12,7 @@
     position: relative;
     outline: none;
     margin-bottom: 15px;
+    opacity: 0.9;
 }
 
 .email-filter .search-section .fa-search {

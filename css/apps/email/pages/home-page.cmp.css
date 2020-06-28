@@ -7,7 +7,6 @@
 }
 
 .home-title {
-    /* background-color: #b18cd2; */
     padding: 10px;
     color: #ffffff;
     text-align: center;
@@ -55,15 +54,10 @@
     border-radius: 60px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.4s;
-    transition: color 0.4s;
+    transition: background-color 1s;
 }
 
 .home-page button:hover {
     background-color: #ffffff;
     color: #9464a2;
 }
-
-/* .home-page img {
-    width: 100%; 
-} */
