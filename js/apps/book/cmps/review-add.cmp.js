@@ -3,7 +3,7 @@ import { bookService } from "../services/book-service.js";
 export default {
   props: ["book"],
   template: `
-          <section v-if="book">
+          <section class="review-add" v-if="book">
               <form  @submit.prevent ="addReview" class="review-add">
                   <h3>Add a Review</h3>
               <span>Full Name </span><input type="text" placeholder="Enter full name" v-model="reviewToEdit.fullName">
@@ -20,21 +20,21 @@ export default {
             <input type="date" id="date-read" name="date-read" v-model="reviewToEdit.readAt">
 
             <div>
-            <textarea v-model="reviewToEdit.freeText" id="txt-review" name="txt-review" rows="4" cols="72">
+            <textarea v-model="reviewToEdit.freeText" id="txt-review" name="txt-review" rows="4" cols="74">
              Write your review...
             </textarea>
             </div>
-            <button>Save</button>
+            <button class="rev-btn">Save</button>
             </form>
 
            <div v-if="hasReviews">
             <h3> Reviews </h3>
             <ul class="clean-list">
                 <li v-for="(review,idx) in book.reviews">
-                    <button @click="deleteReview(idx)" title="Delete review">X</button>
-                    <p>Review by {{review.fullName}}, {{review.stars}} Stars</p> 
-                    <p>Posted at: {{review.readAt}}</p> 
-                    <p>Added Text: {{review.freeText}} </p> 
+                    <button class="remove-rev" @click="deleteReview(idx)" title="Delete review">X</button>
+                    <p><span>Review by</span> {{review.fullName}}, {{review.stars}} Stars</p> 
+                    <p><span>Posted at:</span> {{review.readAt}}</p> 
+                    <p><span>Added Text:</span> {{review.freeText}} </p> 
                 </li>
             </ul>
             </div>

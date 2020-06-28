@@ -4,7 +4,7 @@ import reviewAdd from '../cmps/review-add.cmp.js';
 export default {
   template: `
         <section class="book-details"  v-if="book">
-        <router-link to="/book"> X</router-link>
+        <router-link class="close-btn" to="/book"></router-link>
             
             <div class="datails flex">
             <img class="datails-img" :src=book.thumbnail> 
@@ -12,12 +12,12 @@ export default {
                  <li> <h3>{{book.title}}</h3></li>
                  <li>  <span >Authors:</span> {{bookAuthors}}</li>
                  <li>  <span>Categories:</span> {{bookCategories}}</li>
-                  <li> <span>Description:</span> {{book.description}}</li>
                   <li>  <span>Language:</span> {{book.language}}</li>
-                <li> <span>Price:</span>  </li>
+                <li> <span>Price:</span> {{book.listPrice.amount}}</li>
                  <li>  <span>Pages</span>  {{book.pageCount}}</li>
                  <li>  <span>Published Date:</span>  {{book.publishedDate}}</li>
                 <li>  <span>Subtitle:</span>  {{book.subtitle}}</li>
+                <li> <span>Description:</span> {{book.description}}</li>
         </ul>
             </div>
             <review-add :book="book"/>
@@ -55,3 +55,4 @@ export default {
     reviewAdd
 }
 };
+

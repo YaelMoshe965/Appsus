@@ -1,7 +1,19 @@
 .book-details{
-    background-color: gray;
-    height: auto;
-    padding-bottom: 20px;
+    position: relative;
+    background-color: #b77f61cc;
+    padding: 1rem;
+    width: 60%;
+    min-width: 350px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    line-height: 1.5rem;
+    
 }
 
 
@@ -18,3 +30,31 @@
 .datails li{
     text-align: left;
 }
+
+
+.close-btn {
+    position: absolute;
+    float: right;
+    right: 32px;
+    top: 20px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+  }
+  .close-btn {
+    opacity: 1;
+  }
+  .close-btn:before, .close-btn:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+  }
+  .close-btn:before {
+    transform: rotate(45deg);
+  }
+  .close-btn:after {
+    transform: rotate(-45deg);
+  }
