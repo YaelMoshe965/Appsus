@@ -3,7 +3,7 @@
 }
 
 .email-filter .search-section .search {
-    width: 90%;
+    width: 100%;
     border: 0;
     border-radius: 4px;
     font-size: 16px;
@@ -35,11 +35,14 @@
     cursor: pointer;
 }
 
-
-
 .email-filter .filters-section i.selected {
     color: #d54b3d;
     font-weight: bold;
+}
+
+.email-filter .filters-section select {
+    margin-left: 10px;
+    height: 42px;
 }
 
 @media (max-width: 740px) {

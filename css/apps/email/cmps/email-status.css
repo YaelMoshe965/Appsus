@@ -1,3 +1,9 @@
+.email-status {
+    padding: 15px 0 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+}
+
 .email-status .status-number {
     font-size: 1.2rem;
     text-align: center;

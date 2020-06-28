@@ -48,8 +48,9 @@ export default {
                 }
 
                 if (filterBy.byStatus) {
-                    if (filterBy.byStatus === 'read' && email.isRead) return email.subject;
-                    else if (filterBy.byStatus === 'unread' && !email.isRead) return email.subject;
+                    if (filterBy.byStatus === 'Read' && email.isRead) return true;
+                    else if (filterBy.byStatus === 'Unread' && !email.isRead) return true;
+                    else if (filterBy.byStatus === 'All') return true;
                 }
             })
             return filteredEmails;

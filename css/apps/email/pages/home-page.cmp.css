@@ -44,7 +44,7 @@
     color: #d54b3d;
 }
 
-.home-page button {
+.home-page .btn-app {
     font-size: 1.6rem;
     color: #ffffff;
     background-color: #9464a2;
@@ -55,9 +55,23 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 1s;
+    text-decoration: none;
 }
 
-.home-page button:hover {
+.home-page .btn-app:hover {
     background-color: #ffffff;
     color: #9464a2;
+}
+
+.home-page .apps {
+    display: flex;
+    justify-content: center;
+}
+
+.home-page .apps .btn-app {
+    margin-right: 50px;
+}
+
+.home-all-content {
+    padding: 0 0 20px;
 }

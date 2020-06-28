@@ -1,6 +1,6 @@
 .email-compose {
     min-width: 500px;
-    min-height: 400px;;
+    min-height: 400px;
     position: fixed;
     bottom: 0px;
     right: 20px;
@@ -70,3 +70,4 @@
     margin: 10px;
     cursor: pointer;
 }
+
