@@ -1,0 +1,20 @@
+.book-details{
+    background-color: gray;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+
+.datails-img{
+    width: 300px;
+    height: 400px;
+    margin-right: 30px;
+}
+
+.datails span {
+    font-weight: bold;
+}
+
+.datails li{
+    text-align: left;
+}
