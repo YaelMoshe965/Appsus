@@ -1,5 +1,5 @@
 import homePage from './main-pages/home-page.cmp.js';
-// import bookApp from './apps/book/pages/book-app.cmp.js';
+import bookApp from './apps/book/pages/book-app.cmp.js';
 
 import emailApp from './apps/email/pages/email-app.cmp.js';
 import emailList from './apps/email/pages/email-list.cmp.js';
@@ -25,10 +25,10 @@ const myRoutes = [
             }
         ]
     },
-    // {
-    //     path: '/book',
-    //     component: bookApp
-    // }
+    {
+        path: '/book',
+        component: bookApp
+    }
 ]
 
 export const myRouter = new VueRouter({ routes: myRoutes });

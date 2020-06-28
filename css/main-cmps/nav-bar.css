@@ -1,9 +1,11 @@
 .nav-bar a.nav-link {
-    margin-right: 10px;
+    margin-right: 33px;
     margin-left: 10px;
     text-decoration: none;
     transition: font-weight .3s;
-    color: #000000;
+    /* color: #000000; */
+    color: #d54b3d;
+    font-size: 1.5rem;
 }
 
 .nav-bar .nav-link:hover {
@@ -30,9 +32,6 @@
     }
     .nav-bar.open {
         transform: translateX(0%);
-    }
-    .nav-bar span {
-        display: none;
     }
     .nav-bar a.nav-link {
         text-align: center;

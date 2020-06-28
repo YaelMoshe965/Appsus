@@ -4,7 +4,27 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url(/img/background.png);
+    background-repeat: no-repeat ;
+    background-size: cover;
+    margin: 0;
 }
 
+header {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: ghostwhite;
+    height: 80px;
+}
 
+.main-area {
+    height: 100vh;
+}
+
+footer {
+    height: 110px;
+    background-color: ghostwhite;
+    text-align: center;
+    line-height: 110px;
+}
 

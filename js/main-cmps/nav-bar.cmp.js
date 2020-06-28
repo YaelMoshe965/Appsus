@@ -7,8 +7,8 @@ export default {
             <i class="fas fa-times fa-lg"></i>
         </div>
         <router-link class="nav-link" to="/">Home</router-link>
-        <span>|</span> 
         <router-link class="nav-link" to="/email">Email</router-link>
+        <router-link class="nav-link" to="/book">Books</router-link>
 
         <user-msg />
     </nav>

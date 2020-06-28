@@ -18,9 +18,10 @@ var myApp = new Vue({
                 </div>
                 <nav-bar :navbarMobile="navbarMobile" />
             </header>
-            <main>
+            <main class="main-area">
                 <router-view />
             </main>
+            <footer>All rights reserved</footer>
         </div>  
     `,
 
