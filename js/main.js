@@ -6,7 +6,7 @@ var myApp = new Vue({
     el: '#app',
     router: myRouter,
     template: `
-        <div>
+        <div class="grid">
             <header class="flex space-between align-center">
                 <router-link to="/" class="logo">
                     <h1><span>App</span>sus</h1>

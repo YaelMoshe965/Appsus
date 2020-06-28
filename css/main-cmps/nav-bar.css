@@ -2,10 +2,12 @@
     margin-right: 33px;
     margin-left: 10px;
     text-decoration: none;
-    transition: font-weight .3s;
+    /* transition: font-weight .3s; */
     /* color: #000000; */
     color: #d54b3d;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    font-weight: unset;
+    transition: font-weight .3s;
 }
 
 .nav-bar .nav-link:hover {

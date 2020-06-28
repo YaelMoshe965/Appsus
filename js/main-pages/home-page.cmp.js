@@ -1,8 +1,9 @@
-{/* <img src="img/homepage.jpg" /> */}
+{/* <img src="img/homepage.jpg" /> */ }
 
 export default {
     template: `
         <section class="home-page">
+            <div class="home-all-content">
             <h2 class="home-title">Meet Your New Email</h2>
             <p class="home-content">
                 Welcome to the <span class="inline-logo"><span class="logo-first">App</span><span class="logo-second">sus</span></span> email client
@@ -12,7 +13,7 @@ export default {
                 <br>
                 Get ready to a new email ERA
             </p>
-            <button>Start Now</button>
+            </div>
         </section>
     `,
 }

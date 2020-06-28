@@ -21,7 +21,8 @@
 }
 
 .email-app {
-    grid-template-columns: 2fr 10fr;
+    margin-top: 30px;
+    grid-template-columns: 1fr 10fr;
     grid-gap: 10px;
 }
 

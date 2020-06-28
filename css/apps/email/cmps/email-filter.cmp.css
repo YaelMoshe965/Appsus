@@ -1,15 +1,17 @@
 .email-filter .search-section {
-    flex-grow: 2;
+    flex-grow: 1;
 }
 
 .email-filter .search-section .search {
-    width: 95%;
+    width: 90%;
     border: 0;
     border-radius: 4px;
     font-size: 16px;
     background-color: #f1f3f4;
     padding: 12px 20px 12px 40px;
     position: relative;
+    outline: none;
+    margin-bottom: 15px;
 }
 
 .email-filter .search-section .fa-search {
@@ -24,12 +26,15 @@
 }
 
 .email-filter .filters-section i {
-    font-size: 1rem;
-    margin-left: 10px;
+    font-size: 1.5rem;
+    margin-right: 15px;
     line-height: 42px;
-    color: #e5e5e5;
+    /* color: #e5e5e5; */
+    color: #d54b3d;
     cursor: pointer;
 }
+
+
 
 .email-filter .filters-section i.selected {
     color: #d54b3d;

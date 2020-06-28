@@ -1,36 +1,41 @@
 .email-compose {
-    min-width: 350px;
-    min-height: 220px;;
+    min-width: 500px;
+    min-height: 400px;;
     position: fixed;
     bottom: 0px;
-    right: 10px;
+    right: 20px;
     border: 1px solid #00000014;
     /* border-radius: 4px; */
     background-color: white;
 }
 
 .email-compose header {
+    height: 50px;
     background-color: #404040;
     color: #e0e0e0;
+    font-family: sans-serif;
 }
 
 .email-compose h6 {
-    font-size: 0.7rem;
-    margin-left: 10px;
+    font-size: 1rem;
+    /* margin-left: 10px; */
+    font-weight: normal;
 }
 
 .email-compose .close {
     float: right;
+    font-size: 1.4rem;
     cursor: pointer;
     color: #a6a6a6;
     border: 0;
     background-color: #404040;
+    outline: none;
 }
 
 .email-compose input {
     border: 0;
     border-bottom: 1px solid #eceff1;
-    font-size: 0.7rem;
+    font-size: 1rem;
     margin: 5px 10px;
     outline: none;
     width: 90%;
@@ -39,21 +44,21 @@
 
 .email-compose textarea {
     border: 0;
-    height: 100px;
+    height: 250px;
     margin-left: 10px;
     margin-right: 10px;
     outline: none;
     width: 90%;
+    resize: none;
 }
 
 .email-compose .send {
     background-color: #297be6;
     border: 0;
     color: #fbfdff;
-    font-size: 0.7rem;
-    width: 63px;
-    padding: 5px;
-    height: 27px;
+    font-size: 1rem;
+    width: 70px;
+    height: 30px;
     border-radius: 3px;
     margin: 10px;
     cursor: pointer;

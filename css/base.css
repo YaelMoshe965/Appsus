@@ -15,10 +15,16 @@ header {
     padding-right: 20px;
     background-color: ghostwhite;
     height: 80px;
+    font-family: euro;
+    font-size: 1.7rem;
 }
 
+/* header h1 {
+    font-size: 2.5rem;
+} */
+
 .main-area {
-    height: 100vh;
+    height: 80vh;
 }
 
 footer {
@@ -26,5 +32,8 @@ footer {
     background-color: ghostwhite;
     text-align: center;
     line-height: 110px;
+    font-size: 1.2rem;
+    color: #00000087;
+    font-family: ;
 }
 

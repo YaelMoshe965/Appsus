@@ -1,12 +1,10 @@
-
-
 .email-preview .email-title {
     flex-basis: 30%;
 }
 
 .email-preview .email-body {
     flex-basis: 60%;
-    font-size: 12px;
+    font-size: 15px;
     padding-right: 10px;
 }
 
