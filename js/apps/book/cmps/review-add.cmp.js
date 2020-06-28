@@ -32,7 +32,7 @@ export default {
             <ul class="clean-list">
                 <li v-for="(review,idx) in book.reviews">
                     <button class="remove-rev" @click="deleteReview(idx)" title="Delete review">X</button>
-                    <p><span>Review by</span> {{review.fullName}}, {{review.stars}} Stars</p> 
+                    <p><span>Review by</span> {{review.fullName}},  {{review.stars}} Stars</p> 
                     <p><span>Posted at:</span> {{review.readAt}}</p> 
                     <p><span>Added Text:</span> {{review.freeText}} </p> 
                 </li>
