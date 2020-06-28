@@ -2,8 +2,12 @@
     width: 200px;
     height: 300px;
     border: 1px black solid;
-    margin-right: 10px;
-    margin-bottom: 50px;
+    margin-right: 100px;
+    margin-bottom: 60px;
+}
+
+.book-preview li{
+    font-weight: bold;
 }
 
 

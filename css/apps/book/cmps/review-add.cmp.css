@@ -1,0 +1,50 @@
+
+  .review-add textarea {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    resize: none;
+  }
+
+  .review-add input,select{
+    outline: none;
+  }
+
+  .review-add span,label{
+      font-weight: bold;
+  }
+
+.rev-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+  }
+  
+  .rev-btn:hover {background-color: #3e8e41}
+  
+  .rev-btn:active {
+    background-color: #3e8e41;
+    transform: translateY(4px);
+  }
+
+
+ .remove-rev{
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+ }

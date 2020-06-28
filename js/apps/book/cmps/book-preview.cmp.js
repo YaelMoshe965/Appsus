@@ -1,7 +1,7 @@
 export default{
   props: ["book"],
   template: `
-        <div class="book-preview ">
+        <div class="book-preview">
             <router-link :to="'/book/' + book.id"><img class="book-img" :src=book.thumbnail> </router-link>
             <li class="text-center">
             {{book.title}}
@@ -19,8 +19,6 @@ export default{
     },
      computed: {
         bookCurrency(){
-            console.log(this.book);
-            
             if (this.bookCurrCode === 'USD'){
                 return '$' + this.price;
             }

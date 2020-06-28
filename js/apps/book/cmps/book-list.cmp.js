@@ -3,10 +3,11 @@ import bookPreview from './book-preview.cmp.js';
 export default {
     props: ['books'],
     template: `
-        <ul class="book-list flex wrap clean-list ">
+            <section class="book-list">
+        <ul class="flex wrap justify-center clean-list ">
             <book-preview v-for="book in books" @click.native="selectedBook(book)" :book="book" :key="book.id"/>
-        </ul>
-    `,
+        </ul></section>
+    `,      
     methods: {
         selectedBook(book) {
             
