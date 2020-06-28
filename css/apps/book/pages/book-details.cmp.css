@@ -1,6 +1,6 @@
 .book-details{
     position: relative;
-    background-color: #b77f61cc;
+    background-color: #c921911c;
     padding: 1rem;
     width: 60%;
     min-width: 350px;
@@ -9,11 +9,18 @@
     margin-top: 1rem;
     border-radius: 15px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     border: 1px solid black;
     line-height: 1.5rem;
+    font-family: euro;
+    font-size: 1.3rem;
     
+}
+
+.details{
+  display: flex;
+  flex-direction: row;
 }
 
 
@@ -58,3 +65,13 @@
   .close-btn:after {
     transform: rotate(-45deg);
   }
+
+
+  @media (max-width: 740px) {
+ 
+    .datails-img{
+      width: 150px;
+      height: 200px;
+
+  }
+}

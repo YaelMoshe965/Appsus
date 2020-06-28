@@ -8,10 +8,7 @@ export default{
   template: `
         <main>
             <book-filter @filtered="setFilter"></book-filter>
-            <book-add></book-add>
             <book-list @selected="selectedBook" :books="booksToShow" ></book-list>
-            
-            
         </main>
     `,
   data() {

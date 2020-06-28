@@ -6,7 +6,7 @@ export default {
         <section class="book-details"  v-if="book">
         <router-link class="close-btn" to="/book"></router-link>
             
-            <div class="datails flex">
+        <div class="datails">
             <img class="datails-img" :src=book.thumbnail> 
             <ul class="clean-list">
                  <li> <h3>{{book.title}}</h3></li>
@@ -18,8 +18,8 @@ export default {
                  <li>  <span>Published Date:</span>  {{book.publishedDate}}</li>
                 <li>  <span>Subtitle:</span>  {{book.subtitle}}</li>
                 <li> <span>Description:</span> {{book.description}}</li>
-        </ul>
-            </div>
+            </ul>
+      </div>
             <review-add :book="book"/>
             
         </section>
@@ -43,13 +43,11 @@ export default {
     },
   },
   created(){
-    console.log(this.$route.params);
     const {bookId} = this.$route.params;
     bookService.getById(bookId)
         .then(book => {
             this.book = book;
         })
-    console.log('CMP Book Details Created', bookId);
   },
   components: {
     reviewAdd
