@@ -13,30 +13,30 @@ export const bookService = {
 
 var gBooks = createBooks();
 
-function getGoogleBooks(){
+function getGoogleBooks() {
   return axios.get(`https://www.googleapis.com/books/v1/volumes?printType=books&q=effective%20javascript`)
-  .then(result => {
-    
-    let googleBooks = result.data.items.map(book =>{
-       return {
-        id: book.id,
-        title: book.volumeInfo.title,
-        subtitle: book.volumeInfo.subtitle,
-        authors: book.volumeInfo.authors,
-        publishedDate: book.volumeInfo.publishedDate,
-        description: book.volumeInfo.description,
-        pageCount: book.volumeInfo.pageCount,
-        categories: book.volumeInfo.categories,
-        language: book.volumeInfo.language,
-        listPrice: book.saleInfo.listPrice
-      }   
-})
-return googleBooks;
-})
+    .then(result => {
+
+      let googleBooks = result.data.items.map(book => {
+        return {
+          id: book.id,
+          title: book.volumeInfo.title,
+          subtitle: book.volumeInfo.subtitle,
+          authors: book.volumeInfo.authors,
+          publishedDate: book.volumeInfo.publishedDate,
+          description: book.volumeInfo.description,
+          pageCount: book.volumeInfo.pageCount,
+          categories: book.volumeInfo.categories,
+          language: book.volumeInfo.language,
+          listPrice: book.saleInfo.listPrice
+        }
+      })
+      return googleBooks;
+    })
 }
 
 
-function addGoogleBook(googleBook){
+function addGoogleBook(googleBook) {
 
 
 }
@@ -57,7 +57,7 @@ function addReview(bookId, review) {
   getById(bookId).then((book) => {
     book.reviews.unshift(review);
     utils.storeToStorage(KEY, gBooks);
-    
+
   });
 }
 
@@ -68,6 +68,7 @@ function removeReview(bookId, reviewIdx) {
 }
 
 function createBooks() {
+  let books = [];
   if (utils.loadFromStorage(KEY)) {
     return utils.loadFromStorage(KEY);
   } else {
